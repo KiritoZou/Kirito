@@ -1,0 +1,32 @@
+<!-- filepath: e:\App\miniprogram\pages\index\index.wxml -->
+<view class="launch-page">
+  <!-- 动态马桶雷达动画 -->
+  <view class="radar-animation">
+  </view>
+  
+  <!-- 主标题 -->
+  <text class="slogan">人有三急，我有妙计</text>
+  
+  <!-- 功能入口 -->
+  <view class="action-card">
+    <button class="primary-btn" bindtap="startSearch">
+      🚽 开启寻觅
+    </button>
+  </view>
+
+  <!-- 自定义权限申请弹窗 -->
+  <view class="auth-modal {{showAuthModal ? 'show' : ''}}">
+    <view class="auth-content">
+      <view class="auth-icon">📍</view>
+      <view class="auth-title">需要位置权限</view>
+      <view class="auth-desc">为了帮您找到附近的厕所，需要获取您的位置信息</view>
+      <view class="auth-buttons">
+        <button class="auth-btn cancel" bindtap="handleAuthCancel">暂不开启</button>
+        <button class="auth-btn confirm" bindtap="handleAuthConfirm">去开启</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 图片资源 -->
+ 
+</view>

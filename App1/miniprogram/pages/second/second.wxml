@@ -1,0 +1,40 @@
+<!-- filepath: e:\App\miniprogram\pages\second\second.wxml -->
+<view class="container">
+  <!-- 固定地图区域 -->
+  <view class="map-container">
+    <map
+      id="myMap"
+      longitude="{{longitude}}"
+      latitude="{{latitude}}"
+      scale="16"
+      markers="{{markers}}"
+      show-location="true"
+      style="width: 100%; height: 100%;"
+    ></map>
+  </view>
+
+  <!-- 底部列表区域 -->
+  <view class="list-container">
+    <scroll-view 
+      scroll-y="true" 
+      class="toilet-list"
+      enhanced="true"
+      show-scrollbar="false"
+      bounces="true">
+      <view class="toilet-item" 
+            wx:for="{{markers}}" 
+            wx:key="id" 
+            bindtap="handleToiletTap"
+            data-index="{{index}}">
+        <view class="toilet-info">
+          <view class="toilet-name">{{item.name}}</view>
+          <view class="toilet-address">{{item.address}}</view>
+        </view>
+        <view class="toilet-distance">
+          <text class="distance">{{item.distance}}米</text>
+          <text class="arrow">></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

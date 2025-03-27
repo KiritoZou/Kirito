@@ -1,0 +1,128 @@
+.container {
+  padding: 30rpx;
+}
+
+.main-container {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+}
+
+.toilet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.toilet-item {
+  background: white;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.toilet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.toilet-name {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.toilet-address {
+  font-size: 28rpx;
+  color: #888;
+}
+
+.toilet-distance {
+  font-size: 28rpx;
+  color: #888;
+  text-align: right;
+}
+
+.toilet-rating {
+  font-size: 28rpx;
+  color: #888;
+  text-align: right;
+}
+
+.rating-container {
+  margin-top: 30rpx;
+}
+
+.selected-toilet {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.star-rating {
+  display: flex;
+  gap: 10rpx;
+}
+
+.star {
+  font-size: 40rpx;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.selected {
+  color: #ffcc00;
+}
+
+.submit-button {
+  margin-top: 20rpx;
+  padding: 20rpx;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 10rpx;
+  text-align: center;
+}
+
+.comment-section {
+  margin-top: 20rpx;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx;
+  margin-bottom: 10rpx;
+}
+
+.submit-comment-button {
+  padding: 10rpx;
+  background: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+.comments-list {
+  margin-top: 20rpx;
+}
+
+.comment-item {
+  padding: 10rpx;
+  background: #f0f0f0;
+  border-radius: 5rpx;
+  margin-bottom: 10rpx;
+}
+
+.no-toilet {
+  text-align: center;
+  font-size: 32rpx;
+  color: #888;
+  margin-top: 50rpx;
+}

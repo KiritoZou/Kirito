@@ -1,0 +1,34 @@
+<!-- filepath: e:\App\miniprogram\pages\rate\rate.wxml -->
+<view class="main-container">
+  <view class="toilet-list">
+    <block wx:for="{{toilets}}" wx:key="id">
+      <view class="toilet-item" data-id="{{item.id}}" bindtap="selectToilet">
+        <text class="toilet-name">{{item.name}}</text>
+        <text class="toilet-address">{{item.address}}</text>
+        <text class="toilet-distance">{{item.distance}}</text>
+        <text class="toilet-rating">平均评分: {{item.averageRating}}</text>
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{selectedToilet}}" class="rating-container">
+    <text class="selected-toilet">评分: {{selectedToilet.name}}</text>
+    <view class="star-rating">
+      <block wx:for="{{[1, 2, 3, 4, 5]}}" wx:key="index">
+        <text class="star" data-rating="{{item}}" bindtap="setRating" wx:class="{{rating >= item ? 'selected' : ''}}">★</text>
+      </block>
+    </view>
+    <button class="submit-button" bindtap="submitRating">提交评分</button>
+    <view class="comment-section">
+      <input class="comment-input" placeholder="输入评论..." value="{{newComment}}" bindinput="bindCommentInput"/>
+      <button class="submit-comment-button" bindtap="submitComment">提交评论</button>
+      <view class="comments-list">
+        <block wx:for="{{selectedToilet.comments}}" wx:key="index">
+          <view class="comment-item">{{item}}</view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="no-toilet">
+    <text>未找到厕所信息</text>
+  </view>
+</view>
